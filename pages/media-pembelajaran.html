@@ -7,6 +7,75 @@
   <title>Media Pembelajaran | Portofolio Mahasiswa PPG Calon Guru Informatika</title>
   <link rel="stylesheet" href="../assets/css/style.css">
   <script src="../assets/js/script.js" defer></script>
+
+  <style>
+    /* Pratinjau live demo yang selalu terlihat */
+    .live-demo-preview {
+      margin-top: 18px;
+      border: 1px solid var(--line, #e5e7eb);
+      border-radius: 16px;
+      overflow: hidden;
+      background: var(--surface, #fff);
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+    }
+    .live-demo-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 10px 13px;
+      background: var(--surface-soft, #f8fafc);
+      border-bottom: 1px solid var(--line, #e5e7eb);
+    }
+    .live-demo-dots { display: inline-flex; gap: 5px; }
+    .live-demo-dots i {
+      display: block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #cbd5e1;
+    }
+    .live-demo-dots i:first-child { background: #f87171; }
+    .live-demo-dots i:nth-child(2) { background: #fbbf24; }
+    .live-demo-dots i:nth-child(3) { background: #4ade80; }
+    .live-demo-label {
+      margin-left: auto;
+      color: var(--muted, #64748b);
+      font-size: .78rem;
+      font-weight: 600;
+    }
+    .live-demo-preview iframe {
+      display: block;
+      width: 100%;
+      height: 80vh;
+      min-height: 560px;
+      max-height: 820px;
+      border: 0;
+      background: #fff;
+    }
+    .live-demo-footer {
+      display: flex;
+      justify-content: flex-end;
+      padding: 10px 13px;
+      border-top: 1px solid var(--line, #e5e7eb);
+    }
+    .live-demo-footer a {
+      font-size: .85rem;
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .live-demo-footer a:hover { text-decoration: underline; }
+
+    /* Tampilkan card 1 kolom (1 per baris) di semua ukuran layar */
+    .media-grid {
+      grid-template-columns: 1fr !important;
+    }
+
+    @media (max-width: 768px) {
+      .live-demo-preview iframe { height: 75vh; min-height: 440px; }
+    }
+  </style>
+
 </head>
 <body>
   <a class="skip-link" href="#konten">Lewati ke konten</a>
@@ -30,62 +99,202 @@
     <section class="section"><div class="container">
   <div class="filter-bar reveal"><div><p class="eyebrow">BELAJAR DENGAN TEKNOLOGI</p><h2>Media pembelajaran digital</h2><p class="section-intro">Delapan media yang dapat kamu jelajahi. Gunakan pencarian untuk menemukan media berdasarkan nama atau materi.</p></div><label class="search-control"><span>⌕</span><input type="search" placeholder="Cari media atau materi..." data-search-input aria-label="Cari media pembelajaran"></label></div>
   <div class="media-grid" data-search-container><article class="media-card reveal" data-search="media interaktif informatika beragam topik informatika smp media interaktif untuk membantu siswa mengeksplorasi konsep informatika secara mandiri.">
-      <div class="media-preview"><div class="media-preview-top"><span class="preview-dot"></span><span class="preview-dot"></span><span class="preview-dot"></span><span class="preview-label">MEDIA DIGITAL · 01</span></div><div class="media-preview-content"><span class="media-symbol">⌘</span><span class="media-type">MEDIA PEMBELAJARAN</span><h3>Media Interaktif Informatika</h3><p>Beragam topik Informatika SMP</p></div><span class="preview-number">01</span></div>
-      <div class="media-card-body"><span class="card-kicker">MATERI PEMBELAJARAN</span><h3>Media Interaktif Informatika</h3><p class="media-material">Beragam topik Informatika SMP</p><p>Media interaktif untuk membantu siswa mengeksplorasi konsep Informatika secara mandiri.</p>
-      <div class="demo-actions"><button class="btn btn-primary btn-small" type="button" data-demo-toggle data-url="https://example.github.io/nama-repository/">▶ Live Demo</button><a class="btn btn-secondary btn-small" href="https://example.github.io/nama-repository/" target="_blank" rel="noopener noreferrer">Buka tab baru ↗</a></div>
-      <div class="demo-frame-wrap" hidden><div class="demo-frame-head"><span>Pratinjau live demo</span><button type="button" class="frame-close" data-demo-close aria-label="Tutup pratinjau">Tutup ×</button></div><iframe title="Live demo Media Interaktif Informatika" loading="lazy" data-demo-frame data-src="https://example.github.io/nama-repository/" referrerpolicy="strict-origin-when-cross-origin" sandbox="allow-scripts allow-same-origin allow-forms allow-popups"></iframe><p class="frame-help">Jika pratinjau tidak muncul, gunakan tombol “Buka tab baru”. Ganti URL contoh dengan URL demo asli dari GitHub Pages atau Vercel.</p></div>
-      <p class="url-hint"><code>https://example.github.io/nama-repository/</code><br><span>Ganti URL demo di tombol dan iframe dengan alamat proyek yang sebenarnya.</span></p>
+      <div class="media-preview"><div class="media-preview-top"><span class="preview-dot"></span><span class="preview-dot"></span><span class="preview-dot"></span><span class="preview-label">MEDIA DIGITAL · 01</span></div><div class="media-preview-content"><span class="media-symbol">⌘</span><span class="media-type">MEDIA PEMBELAJARAN</span><h3>Game Bobo</h3><p>Media Simulasi Menjalankan Mesin Pembuat Kue</p></div><span class="preview-number">01</span></div>
+      <div class="media-card-body"><span class="card-kicker">MATERI PEMBELAJARAN</span><h3>Fungsi dalam Komputasional Thinking</h3><p>Media interaktif untuk membantu siswa mengeksplorasi konsep Fungsi secara mandiri.</p>
+      <div class="live-demo-preview">
+        <div class="live-demo-head">
+          <span class="live-demo-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span class="live-demo-label">Pratinjau Live Demo</span>
+        </div>
+        <iframe
+          src="https://layinatulj.github.io/game_bobo/"
+          title="Pratinjau Media Interaktif Informatika"
+          loading="lazy"
+          referrerpolicy="strict-origin-when-cross-origin"
+          sandbox="allow-scripts allow-same-origin allow-forms allow-popups">
+        </iframe>
+        <div class="live-demo-footer">
+          <a href="https://layinatulj.github.io/game_bobo/" target="_blank" rel="noopener noreferrer">Buka demo di tab baru ↗</a>
+        </div>
       </div>
+      </div>
+
+
     </article><article class="media-card reveal" data-search="petualangan microsoft excel pengolahan data dan formula dasar latihan mengenali fungsi spreadsheet melalui aktivitas bertahap.">
-      <div class="media-preview"><div class="media-preview-top"><span class="preview-dot"></span><span class="preview-dot"></span><span class="preview-dot"></span><span class="preview-label">MEDIA DIGITAL · 02</span></div><div class="media-preview-content"><span class="media-symbol">▦</span><span class="media-type">MEDIA PEMBELAJARAN</span><h3>Petualangan Microsoft Excel</h3><p>Pengolahan data dan formula dasar</p></div><span class="preview-number">02</span></div>
-      <div class="media-card-body"><span class="card-kicker">MATERI PEMBELAJARAN</span><h3>Petualangan Microsoft Excel</h3><p class="media-material">Pengolahan data dan formula dasar</p><p>Latihan mengenali fungsi spreadsheet melalui aktivitas bertahap.</p>
-      <div class="demo-actions"><button class="btn btn-primary btn-small" type="button" data-demo-toggle data-url="https://example.github.io/nama-repository/">▶ Live Demo</button><a class="btn btn-secondary btn-small" href="https://example.github.io/nama-repository/" target="_blank" rel="noopener noreferrer">Buka tab baru ↗</a></div>
-      <div class="demo-frame-wrap" hidden><div class="demo-frame-head"><span>Pratinjau live demo</span><button type="button" class="frame-close" data-demo-close aria-label="Tutup pratinjau">Tutup ×</button></div><iframe title="Live demo Petualangan Microsoft Excel" loading="lazy" data-demo-frame data-src="https://example.github.io/nama-repository/" referrerpolicy="strict-origin-when-cross-origin" sandbox="allow-scripts allow-same-origin allow-forms allow-popups"></iframe><p class="frame-help">Jika pratinjau tidak muncul, gunakan tombol “Buka tab baru”. Ganti URL contoh dengan URL demo asli dari GitHub Pages atau Vercel.</p></div>
-      <p class="url-hint"><code>https://example.github.io/nama-repository/</code><br><span>Ganti URL demo di tombol dan iframe dengan alamat proyek yang sebenarnya.</span></p>
+      <div class="media-preview"><div class="media-preview-top"><span class="preview-dot"></span><span class="preview-dot"></span><span class="preview-dot"></span><span class="preview-label">MEDIA DIGITAL · 02</span></div><div class="media-preview-content"><span class="media-symbol">▦</span><span class="media-type">MEDIA PEMBELAJARAN</span><h3>Misteri Pak Taro</h3><p>Media untuk mempelajari Himpunan, mengenal Computational Thinking, menyelidiki Misteri Pak Taro</p></div><span class="preview-number">02</span></div>
+      <div class="media-card-body"><span class="card-kicker">MATERI PEMBELAJARAN</span><h3>Himpunan dalam Komputasional Thinking</h3><p>Media Interaktif untuk mempelajari Himpunan, mengenal Computational Thinking, menyelidiki Misteri Pak Taro, mengerjakan 21 soal HOTS, lalu menutup misi dengan refleksi.</p>
+      <div class="live-demo-preview">
+        <div class="live-demo-head">
+          <span class="live-demo-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span class="live-demo-label">Pratinjau Live Demo</span>
+        </div>
+        <iframe
+          src="https://layinatulj.github.io/himpunan/"
+          title="Pratinjau Petualangan Microsoft Excel"
+          loading="lazy"
+          referrerpolicy="strict-origin-when-cross-origin"
+          sandbox="allow-scripts allow-same-origin allow-forms allow-popups">
+        </iframe>
+        <div class="live-demo-footer">
+          <a href="https://layinatulj.github.io/himpunan/" target="_blank" rel="noopener noreferrer">Buka demo di tab baru ↗</a>
+        </div>
       </div>
+      </div>
+
+
     </article><article class="media-card reveal" data-search="kuis digital informatika evaluasi formatif kuis digital untuk memeriksa pemahaman siswa dengan umpan balik.">
-      <div class="media-preview"><div class="media-preview-top"><span class="preview-dot"></span><span class="preview-dot"></span><span class="preview-dot"></span><span class="preview-label">MEDIA DIGITAL · 03</span></div><div class="media-preview-content"><span class="media-symbol">✓</span><span class="media-type">MEDIA PEMBELAJARAN</span><h3>Kuis Digital Informatika</h3><p>Evaluasi formatif</p></div><span class="preview-number">03</span></div>
-      <div class="media-card-body"><span class="card-kicker">MATERI PEMBELAJARAN</span><h3>Kuis Digital Informatika</h3><p class="media-material">Evaluasi formatif</p><p>Kuis digital untuk memeriksa pemahaman siswa dengan umpan balik.</p>
-      <div class="demo-actions"><button class="btn btn-primary btn-small" type="button" data-demo-toggle data-url="https://example.github.io/nama-repository/">▶ Live Demo</button><a class="btn btn-secondary btn-small" href="https://example.github.io/nama-repository/" target="_blank" rel="noopener noreferrer">Buka tab baru ↗</a></div>
-      <div class="demo-frame-wrap" hidden><div class="demo-frame-head"><span>Pratinjau live demo</span><button type="button" class="frame-close" data-demo-close aria-label="Tutup pratinjau">Tutup ×</button></div><iframe title="Live demo Kuis Digital Informatika" loading="lazy" data-demo-frame data-src="https://example.github.io/nama-repository/" referrerpolicy="strict-origin-when-cross-origin" sandbox="allow-scripts allow-same-origin allow-forms allow-popups"></iframe><p class="frame-help">Jika pratinjau tidak muncul, gunakan tombol “Buka tab baru”. Ganti URL contoh dengan URL demo asli dari GitHub Pages atau Vercel.</p></div>
-      <p class="url-hint"><code>https://example.github.io/nama-repository/</code><br><span>Ganti URL demo di tombol dan iframe dengan alamat proyek yang sebenarnya.</span></p>
+      <div class="media-preview"><div class="media-preview-top"><span class="preview-dot"></span><span class="preview-dot"></span><span class="preview-dot"></span><span class="preview-label">MEDIA DIGITAL · 03</span></div><div class="media-preview-content"><span class="media-symbol">✓</span><span class="media-type">MEDIA PEMBELAJARAN</span><h3>Digimath</h3><p>Media Interaktif untuk belajar Sistem Bilangan</p></div><span class="preview-number">03</span></div>
+      <div class="media-card-body"><span class="card-kicker">MATERI PEMBELAJARAN</span><h3>Sistem Bilangan dalam Komputasional Thinking</h3><p>Aplikasi interaktif untuk belajar sistem bilangan desimal, biner, dan oktal. Dilengkapi simulasi konversi, kartu Digimath digital yang bisa dibalik untuk melihat perubahan nilai secara langsung, serta kuis misi di akhir materi. </p>
+      <div class="live-demo-preview">
+        <div class="live-demo-head">
+          <span class="live-demo-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span class="live-demo-label">Pratinjau Live Demo</span>
+        </div>
+        <iframe
+          src="https://aplikasisistembilangan.vercel.app/"
+          title="Pratinjau Kuis Digital Informatika"
+          loading="lazy"
+          referrerpolicy="strict-origin-when-cross-origin"
+          sandbox="allow-scripts allow-same-origin allow-forms allow-popups">
+        </iframe>
+        <div class="live-demo-footer">
+          <a href="https://aplikasisistembilangan.vercel.app/" target="_blank" rel="noopener noreferrer">Buka demo di tab baru ↗</a>
+        </div>
       </div>
+      </div>
+
+
     </article><article class="media-card reveal" data-search="laboratorium algoritma algoritma dan berpikir komputasional aktivitas untuk melatih penyusunan langkah dan pemecahan masalah.">
-      <div class="media-preview"><div class="media-preview-top"><span class="preview-dot"></span><span class="preview-dot"></span><span class="preview-dot"></span><span class="preview-label">MEDIA DIGITAL · 04</span></div><div class="media-preview-content"><span class="media-symbol">⌁</span><span class="media-type">MEDIA PEMBELAJARAN</span><h3>Laboratorium Algoritma</h3><p>Algoritma dan berpikir komputasional</p></div><span class="preview-number">04</span></div>
-      <div class="media-card-body"><span class="card-kicker">MATERI PEMBELAJARAN</span><h3>Laboratorium Algoritma</h3><p class="media-material">Algoritma dan berpikir komputasional</p><p>Aktivitas untuk melatih penyusunan langkah dan pemecahan masalah.</p>
-      <div class="demo-actions"><button class="btn btn-primary btn-small" type="button" data-demo-toggle data-url="https://example.github.io/nama-repository/">▶ Live Demo</button><a class="btn btn-secondary btn-small" href="https://example.github.io/nama-repository/" target="_blank" rel="noopener noreferrer">Buka tab baru ↗</a></div>
-      <div class="demo-frame-wrap" hidden><div class="demo-frame-head"><span>Pratinjau live demo</span><button type="button" class="frame-close" data-demo-close aria-label="Tutup pratinjau">Tutup ×</button></div><iframe title="Live demo Laboratorium Algoritma" loading="lazy" data-demo-frame data-src="https://example.github.io/nama-repository/" referrerpolicy="strict-origin-when-cross-origin" sandbox="allow-scripts allow-same-origin allow-forms allow-popups"></iframe><p class="frame-help">Jika pratinjau tidak muncul, gunakan tombol “Buka tab baru”. Ganti URL contoh dengan URL demo asli dari GitHub Pages atau Vercel.</p></div>
-      <p class="url-hint"><code>https://example.github.io/nama-repository/</code><br><span>Ganti URL demo di tombol dan iframe dengan alamat proyek yang sebenarnya.</span></p>
+      <div class="media-preview"><div class="media-preview-top"><span class="preview-dot"></span><span class="preview-dot"></span><span class="preview-dot"></span><span class="preview-label">MEDIA DIGITAL · 04</span></div><div class="media-preview-content"><span class="media-symbol">⌁</span><span class="media-type">MEDIA PEMBELAJARAN</span><h3>Bedah Koran</h3><p>Media Interaktif untuk belajar Microsoft Word</p></div><span class="preview-number">04</span></div>
+      <div class="media-card-body"><span class="card-kicker">MATERI PEMBELAJARAN</span><h3>Microsoft Word</h3><p>Media interaktif untuk membedah layout koran digital dan mempelajari langkah menggunakan fitur Microsoft Word. Siswa mengeklik fitur untuk melihat bagian dokumen yang menggunakannya, sehingga lebih mudah mempraktikkannya sendiri.</p>
+      <div class="live-demo-preview">
+        <div class="live-demo-head">
+          <span class="live-demo-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span class="live-demo-label">Pratinjau Live Demo</span>
+        </div>
+        <iframe
+          src="https://babathpangestu.github.io/Word/"
+          title="Pratinjau Laboratorium Algoritma"
+          loading="lazy"
+          referrerpolicy="strict-origin-when-cross-origin"
+          sandbox="allow-scripts allow-same-origin allow-forms allow-popups">
+        </iframe>
+        <div class="live-demo-footer">
+          <a href="https://babathpangestu.github.io/Word/" target="_blank" rel="noopener noreferrer">Buka demo di tab baru ↗</a>
+        </div>
       </div>
+      </div>
+
+
     </article><article class="media-card reveal" data-search="belajar presentasi digital microsoft powerpoint panduan fitur dan praktik menyusun presentasi yang komunikatif.">
-      <div class="media-preview"><div class="media-preview-top"><span class="preview-dot"></span><span class="preview-dot"></span><span class="preview-dot"></span><span class="preview-label">MEDIA DIGITAL · 05</span></div><div class="media-preview-content"><span class="media-symbol">▤</span><span class="media-type">MEDIA PEMBELAJARAN</span><h3>Belajar Presentasi Digital</h3><p>Microsoft PowerPoint</p></div><span class="preview-number">05</span></div>
-      <div class="media-card-body"><span class="card-kicker">MATERI PEMBELAJARAN</span><h3>Belajar Presentasi Digital</h3><p class="media-material">Microsoft PowerPoint</p><p>Panduan fitur dan praktik menyusun presentasi yang komunikatif.</p>
-      <div class="demo-actions"><button class="btn btn-primary btn-small" type="button" data-demo-toggle data-url="https://example.github.io/nama-repository/">▶ Live Demo</button><a class="btn btn-secondary btn-small" href="https://example.github.io/nama-repository/" target="_blank" rel="noopener noreferrer">Buka tab baru ↗</a></div>
-      <div class="demo-frame-wrap" hidden><div class="demo-frame-head"><span>Pratinjau live demo</span><button type="button" class="frame-close" data-demo-close aria-label="Tutup pratinjau">Tutup ×</button></div><iframe title="Live demo Belajar Presentasi Digital" loading="lazy" data-demo-frame data-src="https://example.github.io/nama-repository/" referrerpolicy="strict-origin-when-cross-origin" sandbox="allow-scripts allow-same-origin allow-forms allow-popups"></iframe><p class="frame-help">Jika pratinjau tidak muncul, gunakan tombol “Buka tab baru”. Ganti URL contoh dengan URL demo asli dari GitHub Pages atau Vercel.</p></div>
-      <p class="url-hint"><code>https://example.github.io/nama-repository/</code><br><span>Ganti URL demo di tombol dan iframe dengan alamat proyek yang sebenarnya.</span></p>
+      <div class="media-preview"><div class="media-preview-top"><span class="preview-dot"></span><span class="preview-dot"></span><span class="preview-dot"></span><span class="preview-label">MEDIA DIGITAL · 05</span></div><div class="media-preview-content"><span class="media-symbol">▤</span><span class="media-type">MEDIA PEMBELAJARAN</span><h3>Komputasi Quest</h3><p>Materi Unit 1 dan Unit 2</p></div><span class="preview-number">05</span></div>
+      <div class="media-card-body"><span class="card-kicker">MATERI PEMBELAJARAN</span><h3>Belajar Informatika Kelas 8</h3><p>Belajar Informatika dari mana saja</p>
+      <div class="live-demo-preview">
+        <div class="live-demo-head">
+          <span class="live-demo-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span class="live-demo-label">Pratinjau Live Demo</span>
+        </div>
+        <iframe
+          src="https://script.google.com/macros/s/AKfycbyj3OhdjciELAZ6RyJpMrihqnTvLPnj3Gd39h_wFNrTT38xju4YwoJJS13WghM5YTg/exec"
+          title="Pratinjau Belajar Presentasi Digital"
+          loading="lazy"
+          referrerpolicy="strict-origin-when-cross-origin"
+          sandbox="allow-scripts allow-same-origin allow-forms allow-popups">
+        </iframe>
+        <div class="live-demo-footer">
+          <a href="https://script.google.com/macros/s/AKfycbyj3OhdjciELAZ6RyJpMrihqnTvLPnj3Gd39h_wFNrTT38xju4YwoJJS13WghM5YTg/exec" target="_blank" rel="noopener noreferrer">Buka demo di tab baru ↗</a>
+        </div>
       </div>
+      </div>
+
+
     </article><article class="media-card reveal" data-search="eksplorasi desain canva desain komunikasi visual aktivitas merancang poster atau konten visual untuk pembelajaran.">
-      <div class="media-preview"><div class="media-preview-top"><span class="preview-dot"></span><span class="preview-dot"></span><span class="preview-dot"></span><span class="preview-label">MEDIA DIGITAL · 06</span></div><div class="media-preview-content"><span class="media-symbol">✳</span><span class="media-type">MEDIA PEMBELAJARAN</span><h3>Eksplorasi Desain Canva</h3><p>Desain komunikasi visual</p></div><span class="preview-number">06</span></div>
-      <div class="media-card-body"><span class="card-kicker">MATERI PEMBELAJARAN</span><h3>Eksplorasi Desain Canva</h3><p class="media-material">Desain komunikasi visual</p><p>Aktivitas merancang poster atau konten visual untuk pembelajaran.</p>
-      <div class="demo-actions"><button class="btn btn-primary btn-small" type="button" data-demo-toggle data-url="https://example.github.io/nama-repository/">▶ Live Demo</button><a class="btn btn-secondary btn-small" href="https://example.github.io/nama-repository/" target="_blank" rel="noopener noreferrer">Buka tab baru ↗</a></div>
-      <div class="demo-frame-wrap" hidden><div class="demo-frame-head"><span>Pratinjau live demo</span><button type="button" class="frame-close" data-demo-close aria-label="Tutup pratinjau">Tutup ×</button></div><iframe title="Live demo Eksplorasi Desain Canva" loading="lazy" data-demo-frame data-src="https://example.github.io/nama-repository/" referrerpolicy="strict-origin-when-cross-origin" sandbox="allow-scripts allow-same-origin allow-forms allow-popups"></iframe><p class="frame-help">Jika pratinjau tidak muncul, gunakan tombol “Buka tab baru”. Ganti URL contoh dengan URL demo asli dari GitHub Pages atau Vercel.</p></div>
-      <p class="url-hint"><code>https://example.github.io/nama-repository/</code><br><span>Ganti URL demo di tombol dan iframe dengan alamat proyek yang sebenarnya.</span></p>
+      <div class="media-preview"><div class="media-preview-top"><span class="preview-dot"></span><span class="preview-dot"></span><span class="preview-dot"></span><span class="preview-label">MEDIA DIGITAL · 06</span></div><div class="media-preview-content"><span class="media-symbol">✳</span><span class="media-type">MEDIA PEMBELAJARAN</span><h3>Posttest dan Refleksi Microsoft Word</h3><p>Media digital untuk Menilai Posttest dan Refleksi Siswa</p></div><span class="preview-number">06</span></div>
+      <div class="media-card-body"><span class="card-kicker">MATERI PEMBELAJARAN</span><h3>Microsoft Word</h3><p>Media pembelajaran interaktif materi Microsoft Word yang berisi ringkasan materi, posttest 21 soal dengan nilai otomatis, dan refleksi pembelajaran (refleksi diri, HOTS, kepuasan, dan exit ticket 3-2-1). Hasil siswa tersimpan otomatis di Google Sheets. </p>
+      <div class="live-demo-preview">
+        <div class="live-demo-head">
+          <span class="live-demo-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span class="live-demo-label">Pratinjau Live Demo</span>
+        </div>
+        <iframe
+          src="https://layinatulj.github.io/mword/"
+          title="Pratinjau Eksplorasi Desain Canva"
+          loading="lazy"
+          referrerpolicy="strict-origin-when-cross-origin"
+          sandbox="allow-scripts allow-same-origin allow-forms allow-popups">
+        </iframe>
+        <div class="live-demo-footer">
+          <a href="https://layinatulj.github.io/mword/" target="_blank" rel="noopener noreferrer">Buka demo di tab baru ↗</a>
+        </div>
       </div>
+      </div>
+
+
     </article><article class="media-card reveal" data-search="game detektif data sum, average, sorting, filtering permainan investigasi data untuk mengembangkan keterampilan pengolahan data.">
-      <div class="media-preview"><div class="media-preview-top"><span class="preview-dot"></span><span class="preview-dot"></span><span class="preview-dot"></span><span class="preview-label">MEDIA DIGITAL · 07</span></div><div class="media-preview-content"><span class="media-symbol">◈</span><span class="media-type">MEDIA PEMBELAJARAN</span><h3>Game Detektif Data</h3><p>SUM, AVERAGE, sorting, filtering</p></div><span class="preview-number">07</span></div>
-      <div class="media-card-body"><span class="card-kicker">MATERI PEMBELAJARAN</span><h3>Game Detektif Data</h3><p class="media-material">SUM, AVERAGE, sorting, filtering</p><p>Permainan investigasi data untuk mengembangkan keterampilan pengolahan data.</p>
-      <div class="demo-actions"><button class="btn btn-primary btn-small" type="button" data-demo-toggle data-url="https://example.github.io/nama-repository/">▶ Live Demo</button><a class="btn btn-secondary btn-small" href="https://example.github.io/nama-repository/" target="_blank" rel="noopener noreferrer">Buka tab baru ↗</a></div>
-      <div class="demo-frame-wrap" hidden><div class="demo-frame-head"><span>Pratinjau live demo</span><button type="button" class="frame-close" data-demo-close aria-label="Tutup pratinjau">Tutup ×</button></div><iframe title="Live demo Game Detektif Data" loading="lazy" data-demo-frame data-src="https://example.github.io/nama-repository/" referrerpolicy="strict-origin-when-cross-origin" sandbox="allow-scripts allow-same-origin allow-forms allow-popups"></iframe><p class="frame-help">Jika pratinjau tidak muncul, gunakan tombol “Buka tab baru”. Ganti URL contoh dengan URL demo asli dari GitHub Pages atau Vercel.</p></div>
-      <p class="url-hint"><code>https://example.github.io/nama-repository/</code><br><span>Ganti URL demo di tombol dan iframe dengan alamat proyek yang sebenarnya.</span></p>
+      <div class="media-preview"><div class="media-preview-top"><span class="preview-dot"></span><span class="preview-dot"></span><span class="preview-dot"></span><span class="preview-label">MEDIA DIGITAL · 07</span></div><div class="media-preview-content"><span class="media-symbol">◈</span><span class="media-type">MEDIA PEMBELAJARAN</span><h3>TTS Digital</h3><p>Media Pembelajaran berupa game TTS</p></div><span class="preview-number">07</span></div>
+      <div class="media-card-body"><span class="card-kicker">MATERI PEMBELAJARAN</span><h3>Microsoft Word</h3><p>Teka-teki silang interaktif sebagai ice breaking materi Microsoft Word. Siswa menebak nama-nama fitur Word dari petunjuk fungsinya, dengan dukungan timer, bantuan, dan pemeriksaan jawaban otomatis. </p>
+      <div class="live-demo-preview">
+        <div class="live-demo-head">
+          <span class="live-demo-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span class="live-demo-label">Pratinjau Live Demo</span>
+        </div>
+        <iframe
+          src="https://script.google.com/macros/s/AKfycbwrB4fXi-2Hhr4I4f_a9KFgGTvVTNgP1i-Sa9NVK3clpFUSAa9qvkVAIgBni4ZlmvXP/exec"
+          title="Pratinjau Game Detektif Data"
+          loading="lazy"
+          referrerpolicy="strict-origin-when-cross-origin"
+          sandbox="allow-scripts allow-same-origin allow-forms allow-popups">
+        </iframe>
+        <div class="live-demo-footer">
+          <a href="https://script.google.com/macros/s/AKfycbwrB4fXi-2Hhr4I4f_a9KFgGTvVTNgP1i-Sa9NVK3clpFUSAa9qvkVAIgBni4ZlmvXP/exec" target="_blank" rel="noopener noreferrer">Buka demo di tab baru ↗</a>
+        </div>
+      </div>
+      </div>
+
+
+    </article><article class="media-card reveal" data-search="ruang belajar digital materi informatika smp kumpulan materi, aktivitas, dan evaluasi dalam satu ruang belajar digital.">
+      <div class="media-preview"><div class="media-preview-top"><span class="preview-dot"></span><span class="preview-dot"></span><span class="preview-dot"></span><span class="preview-label">MEDIA DIGITAL · 08</span></div><div class="media-preview-content"><span class="media-symbol">◎</span><span class="media-type">MEDIA PEMBELAJARAN</span><h3>Microsoft powerpoint Digital</h3><p>Materi Microsoft powerpoint dengan model PjBL</p></div><span class="preview-number">08</span></div>
+      <div class="media-card-body"><span class="card-kicker">MATERI PEMBELAJARAN</span><h3>Microsoft powerpoint</h3><p>Media pembelajaran interaktif berbasis web dengan model Project Based Learning (PjBL) untuk melatih siswa membuat menu interaktif “Hanutzy Café” menggunakan fitur Hyperlink PowerPoint. Alurnya mengikuti enam sintaks PjBL, dari pertanyaan mendasar, perencanaan dan jadwal, monitoring proyek, pengujian hasil, sampai evaluasi pengalaman. </p>
+      <div class="live-demo-preview">
+        <div class="live-demo-head">
+          <span class="live-demo-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span class="live-demo-label">Pratinjau Live Demo</span>
+        </div>
+        <iframe
+          src="https://babathpangestu.github.io/Media-PPT-/"
+          title="Pratinjau Ruang Belajar Digital"
+          loading="lazy"
+          referrerpolicy="strict-origin-when-cross-origin"
+          sandbox="allow-scripts allow-same-origin allow-forms allow-popups">
+        </iframe>
+        <div class="live-demo-footer">
+          <a href="https://babathpangestu.github.io/Media-PPT-/" target="_blank" rel="noopener noreferrer">Buka demo di tab baru ↗</a>
+        </div>
+      </div>
       </div>
     </article><article class="media-card reveal" data-search="ruang belajar digital materi informatika smp kumpulan materi, aktivitas, dan evaluasi dalam satu ruang belajar digital.">
-      <div class="media-preview"><div class="media-preview-top"><span class="preview-dot"></span><span class="preview-dot"></span><span class="preview-dot"></span><span class="preview-label">MEDIA DIGITAL · 08</span></div><div class="media-preview-content"><span class="media-symbol">◎</span><span class="media-type">MEDIA PEMBELAJARAN</span><h3>Ruang Belajar Digital</h3><p>Materi Informatika SMP</p></div><span class="preview-number">08</span></div>
-      <div class="media-card-body"><span class="card-kicker">MATERI PEMBELAJARAN</span><h3>Ruang Belajar Digital</h3><p class="media-material">Materi Informatika SMP</p><p>Kumpulan materi, aktivitas, dan evaluasi dalam satu ruang belajar digital.</p>
-      <div class="demo-actions"><button class="btn btn-primary btn-small" type="button" data-demo-toggle data-url="https://example.github.io/nama-repository/">▶ Live Demo</button><a class="btn btn-secondary btn-small" href="https://example.github.io/nama-repository/" target="_blank" rel="noopener noreferrer">Buka tab baru ↗</a></div>
-      <div class="demo-frame-wrap" hidden><div class="demo-frame-head"><span>Pratinjau live demo</span><button type="button" class="frame-close" data-demo-close aria-label="Tutup pratinjau">Tutup ×</button></div><iframe title="Live demo Ruang Belajar Digital" loading="lazy" data-demo-frame data-src="https://example.github.io/nama-repository/" referrerpolicy="strict-origin-when-cross-origin" sandbox="allow-scripts allow-same-origin allow-forms allow-popups"></iframe><p class="frame-help">Jika pratinjau tidak muncul, gunakan tombol “Buka tab baru”. Ganti URL contoh dengan URL demo asli dari GitHub Pages atau Vercel.</p></div>
-      <p class="url-hint"><code>https://example.github.io/nama-repository/</code><br><span>Ganti URL demo di tombol dan iframe dengan alamat proyek yang sebenarnya.</span></p>
+      <div class="media-preview"><div class="media-preview-top"><span class="preview-dot"></span><span class="preview-dot"></span><span class="preview-dot"></span><span class="preview-label">MEDIA DIGITAL · 08</span></div><div class="media-preview-content"><span class="media-symbol">◎</span><span class="media-type">MEDIA PEMBELAJARAN</span><h3>Simulasi Microsoft powerpoint</h3><p>Media Simulasi untuk Microsoft PowerPoint</p></div><span class="preview-number">08</span></div>
+      <div class="media-card-body"><span class="card-kicker">MATERI PEMBELAJARAN</span><h3>Microsoft powerpoint</h3><p>Media pembelajaran interaktif untuk mempelajari fitur Microsoft PowerPoint langsung dari browser, tanpa perlu membuka aplikasinya. Dilengkapi simulasi fitur, tantangan kelompok, serta Pretest dan Posttest online yang bisa dikerjakan langsung.</p>
+      <div class="live-demo-preview">
+        <div class="live-demo-head">
+          <span class="live-demo-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span class="live-demo-label">Pratinjau Live Demo</span>
+        </div>
+        <iframe
+          src="https://layinatulj.github.io/mppt/"
+          title="Pratinjau Ruang Belajar Digital"
+          loading="lazy"
+          referrerpolicy="strict-origin-when-cross-origin"
+          sandbox="allow-scripts allow-same-origin allow-forms allow-popups">
+        </iframe>
+        <div class="live-demo-footer">
+          <a href="https://layinatulj.github.io/mppt/" target="_blank" rel="noopener noreferrer">Buka demo di tab baru ↗</a>
+        </div>
+      </div>
       </div>
     </article></div>
+
+
   <p class="empty-state" data-empty-state hidden>Tidak ada media yang cocok dengan pencarianmu.</p>
 </div></section>
   </main>
