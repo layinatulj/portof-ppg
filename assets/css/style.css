@@ -177,3 +177,60 @@
   border-top: 1px solid var(--line);
 }
 
+/* Media Pembelajaran: LKPD Highlight Box */
+.lkpd-highlight-box {
+  margin-top: 48px;
+  padding: 30px 32px;
+  background: linear-gradient(135deg, var(--surface-soft), var(--sky));
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+.lkpd-highlight-content {
+  flex: 1;
+  min-width: 280px;
+  max-width: 760px;
+}
+.lkpd-highlight-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: var(--blue);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.lkpd-highlight-badge span {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--blue);
+}
+.lkpd-highlight-content h3 {
+  margin: 0 0 10px;
+  font-size: 1.35rem;
+  color: var(--navy);
+}
+.lkpd-highlight-content p {
+  margin: 0;
+  font-size: 0.92rem;
+  line-height: 1.65;
+  color: var(--muted);
+}
+.lkpd-highlight-action {
+  flex-shrink: 0;
+}
+@media (max-width: 640px) {
+  .lkpd-highlight-box {
+    padding: 22px 20px;
+  }
+}
+
+
