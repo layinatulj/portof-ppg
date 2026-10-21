@@ -233,4 +233,89 @@
   }
 }
 
+/* ==========================================================================
+   Publikasi Jurnal Ilmiah (Karya Inovasi)
+   ========================================================================== */
+.journal-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+.journal-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  transition: transform .22s, box-shadow .22s, border-color .22s;
+  box-shadow: 0 4px 18px rgba(15, 23, 42, 0.04);
+}
+.journal-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+  border-color: #8fb5ef;
+}
+.journal-badge-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+  flex-wrap: wrap;
+}
+.journal-number {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  color: var(--blue);
+  text-transform: uppercase;
+}
+.journal-card h3 {
+  font-size: 1.15rem;
+  line-height: 1.45;
+  color: var(--navy);
+  margin: 0 0 10px;
+}
+.journal-location {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--blue);
+  background: var(--sky);
+  padding: 5px 12px;
+  border-radius: 999px;
+  margin-bottom: 14px;
+  width: fit-content;
+}
+.journal-description {
+  font-size: 0.88rem;
+  line-height: 1.65;
+  color: var(--muted);
+  margin-bottom: 20px;
+  flex: 1;
+}
+.journal-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+  flex-wrap: wrap;
+}
+.journal-source {
+  font-size: 0.78rem;
+  color: var(--muted);
+  font-weight: 600;
+}
+@media (max-width: 820px) {
+  .journal-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
 
