@@ -115,6 +115,7 @@ document.addEventListener("DOMContentLoaded", () => {
         : document.querySelectorAll(".innovation-card[data-category]");
       cards.forEach(card => {
         card.hidden = value !== "all" && card.dataset.category !== value;
+        if (!card.hidden) card.classList.add("is-visible");
       });
     });
   });
