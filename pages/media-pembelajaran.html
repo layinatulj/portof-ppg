@@ -66,6 +66,40 @@
     }
     .live-demo-footer a:hover { text-decoration: underline; }
 
+    /* Tampilan Media CS Unplugged (Kartu & Media Fisik) */
+    .unplugged-image-wrap {
+      padding: 24px;
+      background: var(--surface-soft, #f8fafc);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .unplugged-image-wrap .image-button {
+      border: 0;
+      background: none;
+      padding: 0;
+      width: 100%;
+      cursor: zoom-in;
+      border-radius: 14px;
+      overflow: hidden;
+      display: block;
+      transition: transform .22s ease, box-shadow .22s ease;
+    }
+    .unplugged-image-wrap .image-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 28px rgba(22, 55, 102, 0.14);
+    }
+    .unplugged-image-wrap img {
+      width: 100%;
+      height: auto;
+      max-height: 580px;
+      object-fit: contain;
+      background: #fff;
+      border-radius: 12px;
+      border: 1px solid var(--line, #e5e7eb);
+      display: block;
+    }
+
     /* Tampilkan card 1 kolom (1 per baris) di semua ukuran layar */
     .media-grid {
       grid-template-columns: 1fr !important;
@@ -95,9 +129,9 @@
   </nav>
 </header>
   <main id="konten">
-    <section class="page-hero"><div class="container page-hero-inner"><p class="eyebrow"><span class="eyebrow-line"></span> PORTOFOLIO MAHASISWA PPG</p><h1>Media Pembelajaran</h1><p>Kumpulan media pembelajaran digital dengan deskripsi materi dan tautan live demo.</p><div class="breadcrumb"><a href="../index.html">Beranda</a><span>/</span><span>Media Pembelajaran</span></div></div></section>
+    <section class="page-hero"><div class="container page-hero-inner"><p class="eyebrow"><span class="eyebrow-line"></span> PORTOFOLIO MAHASISWA PPG</p><h1>Media Pembelajaran</h1><p>Kumpulan tiga belas media pembelajaran interaktif (Digital &amp; CS Unplugged) dengan deskripsi materi, live demo, dan visualisasi kartu edukatif.</p><div class="breadcrumb"><a href="../index.html">Beranda</a><span>/</span><span>Media Pembelajaran</span></div></div></section>
     <section class="section"><div class="container">
-  <div class="filter-bar reveal"><div><p class="eyebrow">BELAJAR DENGAN TEKNOLOGI</p><h2>Media pembelajaran digital</h2><p class="section-intro">Dua belas media yang dapat kamu jelajahi. Gunakan pencarian untuk menemukan media berdasarkan nama atau materi.</p></div><label class="search-control"><span>⌕</span><input type="search" placeholder="Cari media atau materi..." data-search-input aria-label="Cari media pembelajaran"></label></div>
+  <div class="filter-bar reveal"><div><p class="eyebrow">BELAJAR DENGAN TEKNOLOGI &amp; CS UNPLUGGED</p><h2>Media pembelajaran</h2><p class="section-intro">Tiga belas media pembelajaran yang dapat kamu jelajahi (Media Digital Interaktif &amp; Media Unplugged). Gunakan pencarian untuk menemukan media berdasarkan nama atau materi.</p></div><label class="search-control"><span>⌕</span><input type="search" placeholder="Cari media atau materi..." data-search-input aria-label="Cari media pembelajaran"></label></div>
   <div class="media-grid" data-search-container><article class="media-card reveal" data-search="media interaktif informatika beragam topik informatika smp media interaktif untuk membantu siswa mengeksplorasi konsep informatika secara mandiri.">
       <div class="media-preview"><div class="media-preview-top"><span class="preview-dot"></span><span class="preview-dot"></span><span class="preview-dot"></span><span class="preview-label">MEDIA DIGITAL · 01</span></div><div class="media-preview-content"><span class="media-symbol">⌘</span><span class="media-type">MEDIA PEMBELAJARAN</span><h3>Game Bobo</h3><p>Media Simulasi Menjalankan Mesin Pembuat Kue</p></div><span class="preview-number">01</span></div>
       <div class="media-card-body"><span class="card-kicker">MATERI PEMBELAJARAN</span><h3>Fungsi dalam Komputasional Thinking</h3><p>Media interaktif untuk membantu siswa mengeksplorasi konsep Fungsi secara mandiri.</p>
@@ -394,6 +428,45 @@
           </iframe>
           <div class="live-demo-footer">
             <a href="https://aplikasifokuskelas.vercel.app/" target="_blank" rel="noopener noreferrer">Buka demo di tab baru ↗</a>
+          </div>
+        </div>
+      </div>
+    </article><article class="media-card reveal" data-search="digimath card media unplugged kartu sistem bilangan desimal biner oktal konversi bilangan representasi data informatika cs unplugged smp">
+      <div class="media-preview">
+        <div class="media-preview-top">
+          <span class="preview-dot"></span><span class="preview-dot"></span><span class="preview-dot"></span>
+          <span class="preview-label">MEDIA UNPLUGGED · 13</span>
+        </div>
+        <div class="media-preview-content">
+          <span class="media-symbol">🎴</span>
+          <span class="media-type">MEDIA CS UNPLUGGED</span>
+          <h3>Digimath Card</h3>
+          <p>Kartu Edukatif Sistem Bilangan (Desimal, Biner, Oktal)</p>
+        </div>
+        <span class="preview-number">13</span>
+      </div>
+      <div class="media-card-body">
+        <span class="card-kicker">SISTEM KOMPUTER · SISTEM BILANGAN</span>
+        <h3>Digimath Card (Media Unplugged Sistem Bilangan)</h3>
+        <p>Media pembelajaran inovatif berbasis <em>Computer Science (CS) Unplugged</em> berupa seperangkat kartu edukasi sistem bilangan yang dirancang untuk membantu peserta didik memahami konsep representasi data dan konversi sistem bilangan (Desimal, Biner, dan Oktal) secara konkret tanpa memerlukan gawai komputer. Dilengkapi visualisasi nilai bobot bit (dot representation), angka desimal bertingkat (1, 2, 4, 8, 16, hingga 2048), serta poin konversi oktal yang interaktif untuk aktivitas belajar kelompok yang seru dan menantang.</p>
+        <div class="live-demo-preview">
+          <div class="live-demo-head">
+            <span class="live-demo-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+            <span class="live-demo-label">Pratinjau Media Kartu (CS Unplugged)</span>
+          </div>
+          <div class="unplugged-image-wrap">
+            <button class="image-button" type="button" data-lightbox aria-label="Perbesar gambar Digimath Card">
+              <img
+                src="https://i.ibb.co.com/9kpJj5Zz/Untitled-design-16.png"
+                alt="Digimath Card - Kartu Edukatif Sistem Bilangan Desimal, Biner, dan Oktal"
+                loading="lazy">
+            </button>
+          </div>
+          <div class="live-demo-footer">
+            <span style="margin-right:auto;font-size:.82rem;color:var(--muted);display:inline-flex;align-items:center;gap:6px;">
+              🔍 <em>Klik kartu untuk memperbesar (Lightbox)</em>
+            </span>
+            <a href="https://i.ibb.co.com/9kpJj5Zz/Untitled-design-16.png" target="_blank" rel="noopener noreferrer">Buka resolusi penuh ↗</a>
           </div>
         </div>
       </div>
